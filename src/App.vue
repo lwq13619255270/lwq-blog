@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <div class="lwq-head">
+      <Header></Header>
+    </div>
+    <div class="lwq-content">
+      <div class="lwq-content-left">
+					<router-view></router-view>
+      </div>
+      <div class="lwq-content-right">
+          <RightSide></RightSide>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/header";
+import RightSide from "./components/right-side";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    RightSide
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.lwq-content {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.lwq-content-left{
+  width: calc(100% - 270px);
+  background-color: #fff;
+  min-height: 100px;
+}
+.lwq-content-right {
+  width: 270px;
+  background-color: #fff;
+  min-height: 100px;
 }
 </style>

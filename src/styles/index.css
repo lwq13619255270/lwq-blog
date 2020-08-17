@@ -1,0 +1,7 @@
+@import './reset.css';
+
+body {
+    background-color: #f4f5f5;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
+    height: auto;
+}
